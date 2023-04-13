@@ -1,0 +1,20 @@
+---
+export interface Props {
+  title: string;
+  path: string;
+  href: string;
+}
+
+const { href, title, path } = Astro.props;
+---
+
+<a
+  href={href}
+  target='_blank'
+  class='w-[450px] h-16 rounded-full shadow-xl bg-white flex justify-center items-center px-10'
+>
+  <div class=''>
+    <img src={path} class='w-7 h-7' />
+  </div>
+  <p class='w-full flex justify-center text-xl pr-10'>{title}</p>
+</a>
